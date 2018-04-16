@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul").children().css({ "color": "red", "border": "2px solid red" }); //pegue todos os fil
+        });
+    </script>
+</head>
+
+<body class="descendants">body (bisavô)
+    <div style="width:500px;">div (avô)
+        <ul>ul (pai)
+            <li>li (filho)
+                <span>span (neto)</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

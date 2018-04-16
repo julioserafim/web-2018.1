@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").keydown(function () {
+                $("input").css("background-color", "yellow");
+            });
+            $("input").keyup(function () {
+                $("input").css("background-color", "pink");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    Escreva seu nome:
+    <input type="text">
+
+    <p>Coloque seu nome isso irá mudar a cor da caixa(keyup) e pressionar um tecla por mais tempo também mudará a cor(keydown).</p>
+
+</body>
+
+</html>

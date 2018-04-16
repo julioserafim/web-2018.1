@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1, h2, p").addClass("blue");
+                $("div").addClass("important");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cabeçalho1</h1>
+    <h2>Cabeçalho</h2>
+
+    <p>Parágrafo.</p>
+    <p>Outro texto.</p>
+
+    <div>Este texto é importante</div>
+    <br>
+
+    <button>Adicione as classes ao elementos</button>
+
+</body>
+
+</html>

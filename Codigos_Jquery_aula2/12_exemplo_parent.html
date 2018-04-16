@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("span").parent().css({ "color": "red", "border": "2px solid red" });
+        });
+    </script>
+</head>
+
+<body class="ancestors">body (tataravô)
+    <div style="width:500px;">div (bisavô)
+        <ul>ul (avô)
+            <li>li (pai)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

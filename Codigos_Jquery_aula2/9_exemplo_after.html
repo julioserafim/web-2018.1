@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#p1").after("<p>Hello world!</p>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>Insert content after each p element</button>
+
+    <p id="p1">This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+</body>
+
+</html>

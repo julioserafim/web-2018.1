@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>each demo</title>
+    <style>
+        div {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            float: left;
+            border: 2px blue solid;
+            text-align: center;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+
+    <button>Mude as cores</button>
+    <span></span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="stop">Vamos parar aqui</div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        $("button").click(function () {
+            $("div").each(function (index, element) {
+                // element == this
+                $(element).css("backgroundColor", "yellow");
+                if ($(this).is("#stop")) {
+                    $("span").text("Parou no div index #" + index);
+                    return false;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

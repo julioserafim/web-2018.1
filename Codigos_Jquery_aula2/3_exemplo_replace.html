@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p:first").replaceWith("Hello world!");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Troque por um novo texto</button>
+
+</body>
+
+</html>

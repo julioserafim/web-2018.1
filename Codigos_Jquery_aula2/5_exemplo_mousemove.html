@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $("span").text(event.pageX + ", " + event.pageY);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Coordenadas do mouse:
+        <span></span>.</p>
+
+</body>
+
+</html>

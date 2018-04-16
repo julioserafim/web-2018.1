@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  Digite número:
+  <input id="num1" />
+  <br/> Digite número:
+  <input id="num2" />
+  <br/>
+  <button id="botao">Calcular Multiplicação</button>
+  <div id="resultado">
+  </div>
+  <script src="jquery.js"></script>
+  <script>
+    $('#botao').click(function () {
+      var numero1 = $('#num1').val();
+      var numero2 = $('#num2').val();
+      var resultado = numero1 * numero2;
+      $('#resultado').append(resultado);
+    });
+  </script>
+</body>
+
+</html>
