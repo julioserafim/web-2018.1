@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<form method="POST" action="/pessoa/salvar">
+
+<div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+  Usuario cadastrado com sucesso!
+</div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu nome" name="nome">
+    <small id="emailHelp" class="form-text text-muted">Nome</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Time</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="time">
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<script type="/js/bootstrap.min.css"></script>
+</body>
+</html>
