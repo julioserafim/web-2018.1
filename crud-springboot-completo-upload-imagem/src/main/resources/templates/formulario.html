@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<form method="POST" action="/pessoa/salvar" enctype="multipart/form-data" th:object="${pessoa}">
+<input type="hidden" th:field="*{id}"> 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" th:field="*{nome}">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Time:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{time}">
+  </div>
+  
+  <div class="form-group">
+  
+  	Selecione Imagem: <input type="file" name="imagem">
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="/js/bootstrap.min.js">  </script>
+
+</body>
+</html>
