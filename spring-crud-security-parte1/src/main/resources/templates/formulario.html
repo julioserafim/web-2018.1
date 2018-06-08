@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}">Pessoa salva com sucesso!!!!</span>
+</div>
+
+<form method="POST" action="/pessoa/salvar" enctype="multipart/form-data" th:object="${pessoa}">
+<input type="hidden" th:field="*{id}"> 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nome:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" th:field="*{nome}">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Time:</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{time}">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword2">Data de Nascimento:</label>
+    <input type="text" class="form-control" id="exampleInputPassword2" th:field="*{dataNascimento}">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Username:</label>
+    <input type="text" class="form-control" id="exampleInputPassword4" th:field="*{login}">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password:</label>
+    <input type="text" class="form-control" id="exampleInputPassword4" th:field="*{senha}">
+  </div>
+  
+  <div class="form-group">
+  
+  	Selecione Imagem: <input type="file" name="imagem">
+  
+  
+  </div>
+    
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="/js/bootstrap.min.js">  </script>
+
+</body>
+</html>
