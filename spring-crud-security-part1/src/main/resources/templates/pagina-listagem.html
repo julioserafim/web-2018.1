@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="pessoa : ${todasAsPessoas}">
+      <td th:text="${pessoa.id}"></td>
+      <td th:text="${pessoa.nome}"></td>
+      <td th:text = "${pessoa.time}"></td>
+      <td th:text="${{pessoa.dataNascimento}}"></td>
+      
+      <td> <a th:href="@{/pessoa/{id}(id = ${pessoa.id})}"><button type="button" class="btn btn-primary">Atualizar</button></a> </td>
+      <td> <a class="btn btn-danger" th:href="@{/pessoa/excluir/{id}(id = ${pessoa.id})}"> Excluir </a> </td>
+      <td> <img alt="" th:src="@{'/images/'+${pessoa.nome}+.png}"/> </td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+
+
+
+<script src="/js/bootstrap.min.js">  </script>
+
+</body>
+</html>
