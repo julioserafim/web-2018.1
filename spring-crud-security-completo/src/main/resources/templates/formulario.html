@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -8,8 +8,19 @@
 </head>
 <body>
 
+
+
+
+
+
 <form method="POST" action="/pessoa/salvar" enctype="multipart/form-data" th:object="${pessoa}">
 <input type="hidden" th:field="*{id}">
+
+<div class="alert alert-success" role="alert" th:if="${!#strings.isEmpty(mensagem)}">
+  <span th:text="${mensagem}"> </span>
+</div>
+
+
 
   <div class="form-group">
     <label for="exampleInputEmail1">Nome</label>

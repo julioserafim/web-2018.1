@@ -26,8 +26,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.csrf().disable().authorizeRequests()
 		
 		.antMatchers("/inicio").permitAll() // Permito todo mundo acessar /inicio
-		.antMatchers("/pessoa/formulario").hasRole("USER") //Somente pessoa com papel "USER" acessa /pessoa/formulario
-		.antMatchers("/pessoa/salvar").hasAnyRole("USER","ADMIN") // Pessoa com papel "USER" ou "ADMIN" acessa /pessoa/salvar
+		//.antMatchers("/pessoa/formulario").hasRole("USER") //Somente pessoa com papel "USER" acessa /pessoa/formulario
+		.antMatchers("/pessoa/formulario").permitAll()
+		//.antMatchers("/pessoa/salvar").hasAnyRole("USER","ADMIN") // Pessoa com papel "USER" ou "ADMIN" acessa /pessoa/salvar
+		.antMatchers("/pessoa/salvar").permitAll()
 		.antMatchers("/pessoa/listar").permitAll() // /pessoa/listar todo mundo pode acessar
 		
 		.anyRequest().authenticated() // o resto precisa está autenticado

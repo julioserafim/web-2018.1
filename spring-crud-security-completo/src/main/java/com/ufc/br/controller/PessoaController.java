@@ -33,7 +33,9 @@ public class PessoaController {
 	public ModelAndView salvarPessoa(Pessoa pessoa,@RequestParam(value= "imagem") MultipartFile imagem) {
 		pessoaService.adicionarPessoa(pessoa,imagem);
 		
-		ModelAndView mv = new ModelAndView("redirect:/pessoa/listar");
+		
+		ModelAndView mv = new ModelAndView("formulario");
+		mv.addObject("mensagem", "Usuário cadastrado com sucesso");
 		
 		return mv;
 	}
